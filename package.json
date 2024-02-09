@@ -1,0 +1,29 @@
+{
+  "name": "backend-study",
+  "version": "1.0.0",
+  "description": "Estudo de backend usando express",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "express",
+    "prisma",
+    "zod",
+    "api",
+    "jwt",
+    "mvc"
+  ],
+  "author": "Bryan Machado",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

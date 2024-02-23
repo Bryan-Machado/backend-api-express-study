@@ -1,5 +1,20 @@
-const update = (req, res) => {
-    res.json({message: 'esta é a rota PUT para /user/:id'})
+import userModel from "../../models/userModel.js"
+
+const update = async (req, res) => {
+    try {
+        const dados = req.body
+        const id = req.params.id
+        const user = await userModel.updateById(+id, dados)
+        res.json({
+            success: `usuario ${id} atualizado com sucesso`,
+            user
+        })
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            error: 'oops, erro no servidor, tente novamente!'
+        })
+    }
 }
 
 export default update

@@ -5,7 +5,7 @@ const create = async (req, res) => {
         const dados = req.body
         const user = await userModel.createUser(dados)
         res.json({
-            success: `usuario ${id} encontrado com sucesso`,
+            success: `usuario ${id} criado com sucesso`,
             user
         })
     } catch (error) {

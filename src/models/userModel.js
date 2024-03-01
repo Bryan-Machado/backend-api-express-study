@@ -21,9 +21,7 @@ const createUser = async (userObject) => {
 
 const updateById = async (id, newUserObject) => {
     return await prisma.user.update({
-        data: {
-            newUserObject
-        },
+        data:  newUserObject,
         where: {
             id
         }

@@ -27,3 +27,11 @@ user.idade = 100000
 console.log(user.idade)
 console.log(user.familia.mae);
 console.log(user.prof);
+
+
+
+// Atribuição via desestruturação (destructuring assignment)
+const array1 = [10, 'ola', 'teste', {prop1: 'oi'}]
+
+const [ , , teste, {prop1}] = array1
+console.log(teste, prop1);

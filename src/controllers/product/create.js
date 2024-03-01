@@ -3,9 +3,9 @@ import productModel from "../../models/productModel.js"
 const create = async (req, res) => {
     try {
         const dados = req.body
-        const user = await productModel.createUser(dados)
+        const user = await productModel.createProduct(dados)
         res.json({
-            success: `produto ${id} encontrado com sucesso`,
+            success: `produto ${id} criado com sucesso`,
             user
         })
     } catch (error) {

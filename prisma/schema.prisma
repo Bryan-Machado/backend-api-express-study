@@ -12,12 +12,12 @@ model product {
   name     String @db.VarChar(250)
   price    Int
   quantity Int
-  photo    String @db.LongText
+  photo    String
 }
 
 model user {
   id     Int    @id
   name   String @db.VarChar(250)
   email  String @unique(map: "email_UNIQUE") @db.VarChar(250)
-  avatar String @db.LongText
+  avatar String 
 }

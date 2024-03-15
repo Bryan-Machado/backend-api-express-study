@@ -9,8 +9,8 @@ import logger  from './middlewares/logger.js'
 import userRouter from './routers/userRouter.js'
 import productRouter from './routers/productRouter.js'
 
-app.use(logger)
 app.use(express.json())
+app.use(logger)
 
 app.use('/user', userRouter)
 app.use('/product', productRouter)

@@ -21,7 +21,7 @@ const create = async (req, res) => {
 
         const user = await userModel.createUser(dados)
         res.json({
-            success: `usuario ${id} criado com sucesso`,
+            success: `usuario ${user.id} criado com sucesso`,
             user
         })
     } catch (error) {

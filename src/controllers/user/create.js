@@ -1,5 +1,6 @@
 import userModel from "../../models/userModel.js"
 import zodErrorParser from "../../helpers/zodErrorFormatter.js"
+import bcrypt from 'bcrypt'
 
 const create = async (req, res) => {
     try {
@@ -19,7 +20,9 @@ const create = async (req, res) => {
             })
         }
 
-        const user = await userModel.createUser(dados)
+        result.data.pass = await bcrypt.hash(result.data.pass, 10)
+        const user = await userModel.createUser(result.data)
+        delete user.pass
         res.json({
             success: `usuario ${user.id} criado com sucesso`,
             user

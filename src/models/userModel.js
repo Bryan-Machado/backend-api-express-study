@@ -21,6 +21,11 @@ const userSchema = z.object({
     })
     .email({message: 'Email inválido'}),
 
+    pass: z.string({
+        required_error: 'Senha é obrigatória',
+        invalid_type_error: 'A senha deve ser uma string'
+    }),
+
     avatar: z.string({
         required_error: 'Avatar é obrigatório',
         invalid_type_error: 'O avatar deve ser uma string'
